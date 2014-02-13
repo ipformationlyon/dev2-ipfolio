@@ -4,4 +4,8 @@ return array (
     'Hello world' => 'Bonjour le monde',
     'Education' => 'Formation',
     'Experience' => 'Expérience',
+	'CV'=>'CV',
+    'Sign out' => 'Déconnexion',
+	'Sign in' => 'Connnexion',
+	'Home' => 'Accueil'
 );
