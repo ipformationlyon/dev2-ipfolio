@@ -14,7 +14,7 @@ class Core_Form_Education extends Zend_Form
         $educationDateDebut = new Zend_Form_Element_Text('educationDateDebut');
         $educationDateDebut->setDecorators(array(
         	'ViewHelper',
-            new Core_Decorator_Errors()
+            //new Core_Decorator_Errors()
         ));
         $educationDateDebut->setLabel('Date de d�but');
         $educationDateDebut->setRequired(TRUE);
@@ -26,7 +26,7 @@ class Core_Form_Education extends Zend_Form
         $educationDateFin = new Zend_Form_Element_Text('educationDateFin');
         $educationDateFin->setDecorators(array(
         		'ViewHelper',
-        		new Core_Decorator_Errors()
+        		//new Core_Decorator_Errors()
         ));
         $educationDateFin->setLabel('Date de fin');
         $educationDateFin->setRequired(TRUE);
@@ -38,7 +38,7 @@ class Core_Form_Education extends Zend_Form
         $educationIntitule = new Zend_Form_Element_Text('educationIntitule');
         $educationIntitule->setDecorators(array(
         		'ViewHelper',
-        		new Core_Decorator_Errors()
+        		//new Core_Decorator_Errors()
         ));
         $educationIntitule->setLabel('Intitul�');
         $educationIntitule->setRequired(TRUE);
@@ -50,7 +50,7 @@ class Core_Form_Education extends Zend_Form
         $educationContenu = new Zend_Form_Element_Textarea('educationContenu');
         $educationContenu->setDecorators(array(
         		'ViewHelper',
-        		new Core_Decorator_Errors()
+        		//new Core_Decorator_Errors()
         ));
         $educationContenu->setLabel('Contenu');
         $educationContenu->setRequired(TRUE);
@@ -62,7 +62,7 @@ class Core_Form_Education extends Zend_Form
         $educationLieu = new Zend_Form_Element_Textarea('educationLieu');
         $educationLieu->setDecorators(array(
         		'ViewHelper',
-        		new Core_Decorator_Errors()
+        		//new Core_Decorator_Errors()
         ));
         $educationLieu->setLabel('Lieu');
         $educationLieu->setRequired(TRUE);

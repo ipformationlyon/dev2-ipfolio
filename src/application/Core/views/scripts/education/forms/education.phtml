@@ -1,6 +1,9 @@
 <div>
-    <?= $form->getElement('education_dateDebut');?>
-    <?= $form->getElement('education_dateFin');?>
-    <?= $form->getElement('education_intitule');?>
-    <?= $form->getElement('education_contenu');?>
+
+	<?php $form = $this->element; ?>
+    <?= $form->getElement('educationDateDebut');?>
+    <?= $form->getElement('educationDateFin');?>
+    <?= $form->getElement('educationIntitule');?>
+    <?= $form->getElement('educationContenu');?>
+    <?= $form->getElement('educationLieu');?>
 </div>
