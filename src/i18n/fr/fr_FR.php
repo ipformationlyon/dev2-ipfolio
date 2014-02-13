@@ -3,5 +3,5 @@ return array (
     //Traduction global
     'Hello world' => 'Bonjour le monde',
     'Education' => 'Formation',
-    'Experience' => 'ExpÈrience',
+    'Experience' => 'Exp√©rience',
 );

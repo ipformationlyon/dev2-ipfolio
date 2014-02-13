@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+	<production>
+		<resources>
+			<navigation>
+				<pages>
+					<indexIndex>
+						<label>Accueil</label>
+						<route>indexIndex</route>
+						<pages>
+							<error>
+								<label>Erreur</label>
+								<controller>error</controller>
+								<action>error</action>
+								<visible>0</visible>
+							</error>
+						</pages>
+					</indexIndex>
+					<formation>
+						<label>Education</label>
+						<route>formation</route>
+					</formation>
+					<experienceProfessionnelle>
+						<label>Experience</label>
+						<route>experienceProfessionnelle</route>
+					</experienceProfessionnelle>
+					<cv>
+						<label>cv</label>
+						<route>cv</route>
+					</cv>
+					<login>
+						<label>Connexion</label>
+						<route>login</route>
+						<resource>Core::auth::login</resource>
+					</login>
+					<logout>
+						<label>Déconnexion</label>
+						<route>logout</route>
+						<resource>Core::auth::logout</resource>
+					</logout>
+				</pages>
+			</navigation>
+		</resources>
+	</production>
+	<development extends="production"></development>
+	<testing extends="production"></testing>
+</configdata>
