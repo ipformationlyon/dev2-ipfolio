@@ -1,0 +1,64 @@
+<?= $this->doctype() ?>
+<html class="no-js">
+    <head>
+        <?php 
+        $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1, maximum-scale=1');
+        echo $this->headMeta() . PHP_EOL;
+        echo $this->headTitle('Ip-Folio')->setSeparator(' - ') . PHP_EOL;
+        $this->headLink()->appendStylesheet('/css/bootstrap.min.css');
+        $this->headLink()->appendStylesheet('/css/bootstrap-theme.min.css');
+        $this->headLink()->appendStylesheet('/css/jquery-ui.css');
+        $this->headLink()->appendStylesheet('/css/main.css');
+        echo $this->headLink() . PHP_EOL;
+        $this->headStyle('body { padding-top: 50px; padding-bottom: 20px;}');
+        echo $this->headStyle() . PHP_EOL;
+        $this->headScript()->appendFile('/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js');
+        echo $this->headScript() . PHP_EOL;
+        ?>
+    </head>
+    <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Folio</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <?= $this->navigation()
+                   ->menu()
+                   ->setUlClass('nav navbar-nav')
+      ?>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    
+
+    <div class="container">
+    
+    <br />
+      <ol class="breadcrumb">
+      <?php
+        echo $this->navigation()
+                  ->breadcrumbs()
+                  ->setMinDepth(0)
+                  ->render();
+        ?>
+      </ol>
+      <?= $this->layout()->content ?>
+    </div> <!-- /container -->
+    
+        <?php 
+            $this->inlineScript()->appendFile('/js/vendor/bootstrap.min.js');
+            $this->inlineScript()->appendFile('/js/plugins.js');
+            $this->inlineScript()->appendFile('/js/main.js');
+            echo $this->jQuery() . PHP_EOL;
+            echo $this->inlineScript();
+        ?>
+
+    </body>
+</html>
