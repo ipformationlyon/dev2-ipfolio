@@ -2,17 +2,17 @@
 
 class Core_Model_Education implements Zend_Acl_Resource_Interface
 {
-	private $educationID;
+	private $educationId;
 	private $educationDateDebut;
 	private $educationDateFin;
-	private $educationContenu;
+	private $educationDescription;
 	private $educationIntitule;
 	private $educationLieu;
 	/**
-	 * @return the $educationID
+	 * @return the $educationId
 	 */
-	public function getEducationID() {
-		return $this->educationID;
+	public function getEducationId() {
+		return $this->educationId;
 	}
 
 	/**
@@ -30,10 +30,10 @@ class Core_Model_Education implements Zend_Acl_Resource_Interface
 	}
 
 	/**
-	 * @return the $educationContenu
+	 * @return the $educationDescription
 	 */
-	public function getEducationContenu() {
-		return $this->educationContenu;
+	public function getEducationDescription() {
+		return $this->educationDescription;
 	}
 
 	/**
@@ -55,10 +55,10 @@ class Core_Model_Education implements Zend_Acl_Resource_Interface
 	}
 
 	/**
-	 * @param field_type $educationID
+	 * @param field_type $educationId
 	 */
-	public function setEducationID($educationID) {
-		$this->educationID = $educationID;
+	public function setEducationId($educationId) {
+		$this->educationId = $educationId;
 	}
 
 	/**
@@ -76,10 +76,10 @@ class Core_Model_Education implements Zend_Acl_Resource_Interface
 	}
 
 	/**
-	 * @param field_type $educationContenu
+	 * @param field_type $educationDescription
 	 */
-	public function setEducationContenu($educationContenu) {
-		$this->educationContenu = $educationContenu;
+	public function setEducationDescription($educationDescription) {
+		$this->educationDescription = $educationDescription;
 	}
 
 	/**

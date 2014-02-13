@@ -34,7 +34,7 @@
                     $userAuth = $auth->getIdentity();
                 }else{
                     $userAuth = new Core_Model_User();
-                    $userAuth->setRoleId(Core_Model_User::GUEST);
+                    $userAuth->setUserRole(Core_Model_User::GUEST);
                 }
             ?>
       <?= $this->navigation()

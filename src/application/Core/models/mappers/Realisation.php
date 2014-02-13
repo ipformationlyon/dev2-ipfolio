@@ -9,37 +9,17 @@ class Core_Model_Mapper_Realisation
         $row = $rowSet->current();
         
         $realisation = new Core_Model_Realisation();
-        $realisation->setrealisationId($row->id_realisation)
-                ->setrealisationTitle($row->title_realisation)
-                ->setrealisationContent($row->content_realisation)
-         		->setdate($row->datedebut_realisation)
-         		->setimgRealisation($row->datefin_realisation);
+        $realisation->setRealisationId($row->id_realisation)
+                ->setRealisationIntitule($row->intitule_realisation)
+                ->setRealisationDescription($row->description_realisation)
+         		->setRealisationDate($row->date_realisation)
+         		->setRealisationImage($row->image_realisation);
                  
         return $realisation;
     }
     
-    public function fetchLast($count)
-    {
-        $dbTable = new Core_Model_DbTable_Realisation();
-        $rowSet = $dbTable->fetchAll(null,array('id_realisation DESC'),$count);
-        
-        if (0 === $rowSet->count()) {
-            return false;
-        }
-        
-        $realisations = array();
-        foreach($rowSet as $row) {
-            $realisation = new Core_Model_Realisation();
-            $realisation->setrealisationId($row->id_realisation)
-                ->setrealisationTitle($row->title_realisation)
-                ->setrealisationContent($row->content_realisation)
-         		->setdate($row->datedebut_realisation)
-         		->setimgRealisation($row->datefin_realisation);
-        
-            $realisations[] = $realisation;
-        }
-        
-        return $realisations;
+    public function fetchAll($where){
+    
     }
     
     public function delete(Core_Model_Realisation $realisation){

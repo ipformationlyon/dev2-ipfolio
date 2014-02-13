@@ -10,42 +10,20 @@ class Core_Model_Mapper_User
         
         $user = new Core_Model_user();
         $user->setuserId($row->id_user)
-                ->setuserNom($row->nom_user)
-                ->setuserPrenom($row->prenom_user)
-         		->setuserLogin($row->login_user)
-         		->setuserMdp($row->mdp_user)
-        		->setuserMail($row->mail_user)
-        		->setuserNaissance($row->naissance_user)
-        		->setuserSexe($row->sexe_user);
+                ->setUserRole($row->role_user)
+                ->setUserNom($row->nom_user)
+                ->setUserPrenom($row->prenom_user)
+         		->setUserLogin($row->login_user)
+         		->setUserMdp($row->mdp_user)
+        		->setUserMail($row->mail_user)
+        		->setUserNaissance($row->naissance_user)
+        		->setUserSexe($row->sexe_user);
                  
         return $user;
     }
     
-    public function fetchLast($count)
-    {
-        $dbTable = new Core_Model_DbTable_User();
-        $rowSet = $dbTable->fetchAll(null,array('id_user DESC'),$count);
-        
-        if (0 === $rowSet->count()) {
-            return false;
-        }
-        
-        $users = array();
-        foreach($rowSet as $row) {
-            $user = new Core_Model_User();
-            $user->setuserId($row->id_user)
-                ->setuserNom($row->nom_user)
-                ->setuserPrenom($row->prenom_user)
-         		->setuserLogin($row->login_user)
-         		->setuserMdp($row->mdp_user)
-        		->setuserMail($row->mail_user)
-        		->setuserNaissance($row->naissance_user)
-        		->setuserSexe($row->sexe_user);
-        
-            $users[] = $user;
-        }
-        
-        return $users;
+    public function fetchAll($where){
+    
     }
     
     public function delete(Core_Model_User $user){

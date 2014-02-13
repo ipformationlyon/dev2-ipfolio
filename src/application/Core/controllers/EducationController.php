@@ -2,8 +2,9 @@
 
 class EducationController extends Zend_Controller_Action{
 	
-public function indexAction()
+    public function indexAction()
     {
+        $this->_forward('read');
 
     }
 	
@@ -34,6 +35,10 @@ public function indexAction()
         }
         
         $this->view->form = $form;
+    }
+    
+    public function readAction(){
+        
     }
 	
 	public function updateAction(){

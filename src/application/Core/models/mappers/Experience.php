@@ -9,39 +9,18 @@ class Core_Model_Mapper_Experience
         $row = $rowSet->current();
         
         $experience = new Core_Model_Experience();
-        $experience->setexperienceId($row->id_experience)
-                ->setexperienceTitle($row->title_experience)
-                ->setexperienceContent($row->content_experience)
-         		->setdatedebut($row->datedebut_experience)
-         		->setdatefin($row->datefin_experience)
-         		->setentreprise($row->entreprise_experience);
+        $experience->setExperienceId($row->id_experience)
+                ->setExperienceIntitule($row->intitule_experience)
+                ->setExperienceDescription($row->description_experience)
+         		->setExperienceDatedebut($row->datedebut_experience)
+         		->setExperienceDatefin($row->datefin_experience)
+         		->setExperienceEntreprise($row->entreprise_experience);
                  
-        return $Experience;
+        return $experience;
     }
     
-    public function fetchLast($count)
-    {
-        $dbTable = new Core_Model_DbTable_Experience();
-        $rowSet = $dbTable->fetchAll(null,array('id_experience DESC'),$count);
-        
-        if (0 === $rowSet->count()) {
-            return false;
-        }
-        
-        $Experiences = array();
-        foreach($rowSet as $row) {
-            $experience = new Core_Model_Experience();
-            $experience->setExperienceId($row->id_experience)
-                    ->setexperienceTitle($row->title_experience)
-                    ->setexperienceContent($row->content_experience)
-                    ->setdatedebut($row->datedebut_experience)
-                    ->setdatefin($row->datefin_experience)
-                    ->setentreprise($row->entreprise_experience);
-        
-            $experiences[] = $experience;
-        }
-        
-        return $experiences;
+    public function fetchAll($where){
+    
     }
     
     public function delete(Core_Model_Experience $experience){
